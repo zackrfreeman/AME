@@ -1,0 +1,107 @@
+---
+title: 'Project One | Code Stitch Web Designs'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'store/'
+eleventyNavigation:
+    key: Project One
+    order: 3100
+    parent: Projects
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/store.css">
+{% endblock %}
+
+{% block body %}
+
+
+ <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+      <h1 id="home-h">Store</h1>
+      <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset="/assets/images/landingSMS.png">
+        <source media="(min-width: 601px)" srcset="/assets/images/landingSMS.png">
+        <img loading="lazy" decoding="async" src="/assets/images/landingSMS.png" alt="Sheldon Medical Supply" width="1920" height="1200" aria-hidden="true">      </picture>
+          <!-- Category navigation via links -->
+          <div class="cs-button-box">
+            <a href="/store/" class="cs-button-transparent">Store Home
+            </a>
+            <a href="#!/c/180767548" class="cs-button-transparent">CPAP Masks
+            </a>
+            <a href="#!/c/180768043" class="cs-button-transparent">CPAP Machines
+            </a>
+            <a href="#!/c/180768548" class="cs-button-transparent">Wheelchaires
+            </a>
+            <a href="#!/c/180768333" class="cs-button-transparent">NIV
+            </a>
+          </div>
+  </section>
+    <!-- ============================================ -->
+    <!--                   Store                    -->
+    <!-- ============================================ -->
+   
+
+    <section id="gallery">
+      <!-- Top container with cart -->
+      <div class="cs-container">
+        <div class="ec-cart-widget"></div>
+      </div>
+    
+      <!-- Store container -->
+      <div class="cs-container">
+        <!-- Ecwid store container -->
+        <div id="my-store-116228016"></div>
+      </div>
+    
+      <!-- Ecwid + Store Loader -->
+      <script data-cfasync="false" type="text/javascript"
+        src="https://app.ecwid.com/script.js?116228016&data_platform=code&data_date=2025-05-03"
+        charset="utf-8">
+      </script>
+      <script type="text/javascript">
+        Ecwid.init();
+        xProductBrowser(
+          "categoriesPerRow=3",
+          "views=grid(20,3) list(60) table(60)",
+          "categoryView=grid",
+          "searchView=list",
+          "id=my-store-116228016"
+        );
+      </script>
+    
+      <!-- Custom product logic -->
+      <script>
+        document.addEventListener("ec-product-ready", function (e) {
+          const product = e.detail.product;
+          const orderMethodAttr = product.attributes?.find(attr => attr.name === "OrderMethod");
+          const orderMethod = orderMethodAttr?.value?.toLowerCase();
+    
+          if (orderMethod === "contact") {
+            const addToBagButtons = document.querySelectorAll('.ecwid-AddToBagButton');
+            addToBagButtons.forEach(btn => btn.style.display = 'none');
+    
+            const contactButton = document.createElement('a');
+            contactButton.href = "/contact/";
+            contactButton.className = "cs-button-solid";
+            contactButton.innerText = "Contact to Order";
+    
+            const detailsContainer = document.querySelector('.ecwid-productBrowser-details');
+            if (detailsContainer) {
+              detailsContainer.appendChild(contactButton);
+            }
+          }
+        });
+      </script>
+    </section>
+    
+    
+    
+    {% include 'components/cta.html' %}
+
+{% endblock %}

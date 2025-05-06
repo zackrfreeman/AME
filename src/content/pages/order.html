@@ -1,0 +1,138 @@
+---
+title: 'Contact | Code Stitch Web Designs'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'order/'
+eleventyNavigation:
+    key: Contact Us
+    order: 600
+    hideOnDesktop: true
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/order.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <h1 id="home-h">Contact Us</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                Contact Form                  -->
+    <!-- ============================================ -->
+
+    <section id="order" class="cs-contact">
+        <div class="cs-container">
+            <form id="cs-form" name="product-inquiry" method="post" netlify>
+                <input type="hidden" name="order" value="product-inquiry">
+                <p class="hidden">
+                    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                  </p>
+                  
+
+                <input type="hidden" name="product-name" id="product-name-field">
+                <div class="cs-content">
+                    <span class="cs-topper">Contact</span>
+                    <h2 class="cs-title">Get in Touch</h2>
+                    <p class="cs-text">
+                      To get you the supplies you need, we’ll need to verify your prescription and insurance information. Please fill out the form below. If we need anything else to complete your order, we’ll reach out directly.
+                    </p>
+                    
+                </div>
+                <label>
+                    First Name:
+                    <input type="text" name="first-name" required>
+                </label>
+    
+                <label>
+                    Last Name:
+                    <input type="text" name="last-name" required>
+                </label>
+    
+                <label>
+                    Date of Birth:
+                    <input type="date" name="dob" required>
+                </label>
+    
+                <label>
+                    Address:
+                    <input type="text" name="address" required>
+                </label>
+    
+                <label>
+                    Email:
+                    <input type="email" name="email" required>
+                </label>
+    
+                <label>
+                    Phone Number:
+                    <input type="tel" name="phone" required>
+                </label>
+    
+                <label>
+                    Prescribing Physician:
+                    <input type="text" name="physician" required>
+                </label>
+    
+                <label>
+                    Physician Phone Number:
+                    <input type="tel" name="physician-phone" required>
+                </label>
+    
+                <label>
+                    Attach File:
+                    <input type="file" name="attachment">
+                </label>
+                <button class="cs-button-solid" type="submit">Submit Message</button>
+            </form>
+            <div class="cs-right-section">
+                <span class="cs-header">Email</span>
+                <a class="cs-link" href="mailto:{{client.email}}">{{client.email}}</a>
+                <span class="cs-header">Phone</span>
+                <a class="cs-link" href="tel:{{client.phoneForTel}}">{{client.phoneFormatted}}</a>
+                <span class="cs-header">Address</span>
+                <a class="cs-link" href="{{client.address.mapLink}}">
+                    {{client.address.lineOne}},
+                    <br/>
+                    {{client.address.lineTwo}},
+                    <br/>
+                    <span class="cs-block">
+                        {{client.address.city}}
+                        {{client.address.state}}
+                        {{client.address.zip}}
+                    </span>
+                </a>
+    
+                <picture class="cs-bg-picture">
+                    <source media="(min-width: 601px)" srcset="/assets/images/skyscraper.jpg">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/skyscraper.jpg" alt="building" loading="lazy" width="2500" height="1667">
+                </picture>
+    
+            </div>
+        </div>
+    </section>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const productNameElement = document.querySelector('.product-title'); // Replace with the actual selector for your product name
+        const productNameField = document.getElementById('product-name-field');
+    
+        if (productNameElement && productNameField) {
+          productNameField.value = productNameElement.textContent.trim();
+        }
+      });
+    </script>
+{% endblock %}
