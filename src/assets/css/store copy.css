@@ -1,0 +1,46 @@
+/* PAGE-SPECIFIC STYLES FOR THE PROJECTS PAGE */
+/*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+/* Mobile - 360px - Contains hover animation */
+@media only screen and (min-width: 0rem) {
+  #int-hero h1 {
+    padding-top: 1rem;
+  }
+  #int-hero .cs-button-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  #gallery {
+    position: relative;
+    padding: var(--sectionPadding);
+    overflow: hidden;
+  }
+  #gallery .cs-container {
+    position: relative;
+    max-width: 82.625em;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #gallery .cs-container:first-of-type {
+    min-height: 3rem;
+  }
+  #gallery .cs-container:first-of-type .ec-cart-widget {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: auto;
+  }
+  #gallery .cs-button-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+  }
+}

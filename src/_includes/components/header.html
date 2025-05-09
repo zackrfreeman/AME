@@ -21,41 +21,52 @@
             <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link cs-active">
-                            Home
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                            About
-                        </a>
-                    </li>
-                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li"><a href="/" class="cs-li-link cs-active">Home</a></li>
+                    <li class="cs-li"><a href="/store/" class="cs-li-link">Store</a></li>
                     <li class="cs-li cs-dropdown" tabindex="0">
-                        <span class="cs-li-link">
-                            Menu
-                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                        </span>
+                        <span class="cs-li-link">Our Services<img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arrow-dwon2.svg" alt="dropdown icon" width="24" height="24" decoding="async"></span>
                         <ul class="cs-drop-ul">
-                            <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link">Breakfast</a>
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="" class="cs-li-link cs-drop-link">Dinner</a>
-                            </li>
+                            <li class="cs-drop-li"><a href="/services/oxygen" class="cs-li-link cs-drop-link">Home Oxygen Program</a></li>
+                            <li class="cs-drop-li"><a href="/services/sleep-therapy" class="cs-li-link cs-drop-link">Sleep Therapy</a></li>
+                            <li class="cs-drop-li"><a href="/services/ventilator" class="cs-li-link cs-drop-link">Home Ventilator Program</a></li>
+                            <li class="cs-drop-li"><a href="/services/respiratory" class="cs-li-link cs-drop-link">Respiratory Therapy</a></li>
+                            <li class="cs-drop-li"><a href="/services/mobility" class="cs-li-link cs-drop-link">Mobility Equipment</a></li>
+                            <li class="cs-drop-li"><a href="/services/beds-lifts" class="cs-li-link cs-drop-link">Hospital Beds & Lifts</a></li>
                         </ul>
                     </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                            Catering
-                        </a>
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link">Supplies<img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arrow-dwon2.svg" alt="dropdown icon" width="24" height="24" decoding="async"></span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li"><a href="/services/wound-care" class="cs-li-link cs-drop-link">Wound Care Supplies</a></li>
+                            <li class="cs-drop-li"><a href="/store/" class="cs-li-link cs-drop-link">CPAP/BPAP Supplies</a></li>
+                            <li class="cs-drop-li"><a href="/services/incontinence" class="cs-li-link cs-drop-link">Incontinence Products</a></li>
+                            <li class="cs-drop-li"><a href="/services/nebulizers" class="cs-li-link cs-drop-link">Nebulizers & Aerosol</a></li>
+                            <li class="cs-drop-li"><a href="/services/suction" class="cs-li-link cs-drop-link">Suction Equipment</a></li>
+                            <li class="cs-drop-li"><a href="/services/enteral-nutrition" class="cs-li-link cs-drop-link">Enteral Nutrition</a></li>
+                            <li class="cs-drop-li"><a href="/services/accessories" class="cs-li-link cs-drop-link">Accessories & Tubing</a></li>
+                        </ul>
                     </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                            Contact
-                        </a>
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link">Patient Resources<img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arrow-dwon2.svg" alt="dropdown icon" width="24" height="24" decoding="async"></span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li"><a href="/resources/how-to-get-equipment" class="cs-li-link cs-drop-link">How to Get Equipment</a></li>
+                            <li class="cs-drop-li"><a href="/resources/insurance" class="cs-li-link cs-drop-link">Insurance Info</a></li>
+                            <li class="cs-drop-li"><a href="/resources/forms" class="cs-li-link cs-drop-link">Patient Forms</a></li>
+                            <li class="cs-drop-li"><a href="/resources/manuals" class="cs-li-link cs-drop-link">Equipment Manuals</a></li>
+                            <li class="cs-drop-li"><a href="/resources/delivery" class="cs-li-link cs-drop-link">Delivery Expectations</a></li>
+                            <li class="cs-drop-li"><a href="/resources/returns" class="cs-li-link cs-drop-link">Return Policy</a></li>
+                        </ul>
                     </li>
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link">Provider Resources<img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arrow-dwon2.svg" alt="dropdown icon" width="24" height="24" decoding="async"></span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li"><a href="/providers/referrals" class="cs-li-link cs-drop-link">Referral Process</a></li>
+                            <li class="cs-drop-li"><a href="/providers/forms" class="cs-li-link cs-drop-link">Order Forms</a></li>
+                            <li class="cs-drop-li"><a href="/providers/guidelines" class="cs-li-link cs-drop-link">Medical Necessity</a></li>
+                            <li class="cs-drop-li"><a href="/providers/documentation-tips" class="cs-li-link cs-drop-link">Documentation Tips</a></li>
+                        </ul>
+                    </li>
+                    
                 </ul>
             </div>
         </nav>
