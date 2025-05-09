@@ -324,12 +324,6 @@
     z-index: 1;
     overflow: hidden;
   }
-  #services-1800 .cs-item:hover .cs-background:before {
-    opacity: 0.8;
-  }
-  #services-1800 .cs-item:hover .cs-background img {
-    transform: scale(1.2);
-  }
   #services-1800 .cs-link {
     text-decoration: none;
     width: 100%;
@@ -365,137 +359,50 @@
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   }
   #services-1800 .cs-background {
-    width: 100%;
-    height: 100%;
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+    width: 100%;
+    height: 100%;
   }
   #services-1800 .cs-background:before {
-    /* background color overlay */
     content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: #3C3B6E;
+    background-color: #2F3A60;
     opacity: 0.4;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
     z-index: 1;
-    transition: background-color 0.3s, opacity 0.3s;
   }
-  #services-1800 .cs-background img {
+  #services-1800 .cs-item:hover .cs-background.blue:before {
+    background-color: #5A6BAF;
+  }
+  #services-1800 .cs-item:hover .cs-background.red:before {
+    background-color: #C03C3C;
+  }
+  #services-1800 .cs-item:hover .cs-background.white:before {
+    background-color: #F0F0F0;
+  }
+  #services-1800 .cs-item:hover .cs-background img {
+    transform: scale(1.1);
+  }
+  #services-1800 picture {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    /* Makes img tag act as a background image */
+    z-index: -2;
+  }
+  #services-1800 picture img {
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.6s;
-  }
-  #services-1800 .cs-background-b {
     width: 100%;
     height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  #services-1800 .cs-background-b:before {
-    /* background color overlay */
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: #3C3B6E;
-    opacity: 0.2;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: background-color 0.3s, opacity 0.3s;
-  }
-  #services-1800 .cs-background-b img {
-    width: 100%;
-    height: 100%;
-    /* Makes img tag act as a background image */
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.6s;
-  }
-  #services-1800 .cs-background-r {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  #services-1800 .cs-background-r:before {
-    /* background color overlay */
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: #B22234;
-    opacity: 0.1;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: background-color 0.3s, opacity 0.3s;
-  }
-  #services-1800 .cs-background-r img {
-    width: 100%;
-    height: 100%;
-    /* Makes img tag act as a background image */
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.6s;
-  }
-  #services-1800 .cs-background-w {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  #services-1800 .cs-background-w:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    opacity: 0.2;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: background-color 0.3s, opacity 0.3s;
-  }
-  #services-1800 .cs-background-w:hover::before {
-    opacity: 0.6;
-  }
-  #services-1800 .cs-background-w img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.6s;
+    transition: transform 0.4s ease;
   }
 }
 /* Tablet - 768px */
