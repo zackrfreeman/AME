@@ -15,6 +15,21 @@
     gap: 1.25rem;
     margin-bottom: 1rem;
   }
+  .ec-size .ec-store .ec-grid .ec-page-title {
+    text-align: left !important;
+  }
+  .ec-size .ec-store .grid__categories--advanced {
+    justify-content: flex-start !important;
+  }
+  .ec-size .ec-store.ec-store__category-page--0 .grid__products {
+    justify-content: flex-start !important;
+  }
+  .grid__category-block--id-180767548 {
+    background-color: #f7f7f7 !important;
+  }
+  .grid__category-block--id-180768548 {
+    background-color: #f7f7f7 !important;
+  }
   #gallery {
     position: relative;
     padding: var(--sectionPadding);

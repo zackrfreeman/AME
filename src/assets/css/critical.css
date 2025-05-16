@@ -34,7 +34,7 @@
     left: 0;
     z-index: 2;
     pointer-events: none;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.8) 55%, #ffffff 60%, #ffffff 100%);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 45%, #ffffff 50%);
   }
   #hero-509 .cs-background img {
     position: absolute;
@@ -87,16 +87,38 @@
     right: 100%;
   }
   #hero-509 .cs-title {
-    /* 39px - 61px */
-    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
-    font-weight: 700;
-    line-height: 1.2em;
     text-align: left;
     max-width: 51.8125rem;
     /* 16px - 24px */
-    margin: 0 auto clamp(1rem, 4vw, 1.5rem) 0;
+    margin: 0 0 1rem 0;
     color: var(--headerColor);
     position: relative;
+  }
+  #hero-509 .cs-title-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.05rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+  #hero-509 .cs-line {
+    display: block;
+    padding: 0;
+    margin: 0;
+    line-height: 0.9;
+  }
+  #hero-509 .cs-title-red {
+    color: #B22234;
+    font-size: clamp(4.75rem, 11vw, 6.75rem);
+    font-weight: 800;
+  }
+  #hero-509 .cs-title-blue {
+    color: #3C3B6E;
+    font-size: clamp(3.25rem, 2.5vw, 4.25rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
   }
   #hero-509 .cs-text {
     /* 16px - 20px */
@@ -106,9 +128,12 @@
     width: 100%;
     /* 464px - 622px */
     max-width: clamp(29rem, 60vw, 38.785rem);
-    margin: 0 auto 0 0;
-    margin-bottom: 2.25rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     color: var(--bodyTextColor);
+  }
+  #hero-509 .button-group {
+    gap: 0.75rem;
   }
   #hero-509 .cs-card-group {
     width: 100%;
